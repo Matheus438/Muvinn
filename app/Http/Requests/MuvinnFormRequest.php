@@ -61,9 +61,9 @@ public function messages()
         'preco.decimal' => 'O campo de preço tem que ser em decimal. Exemplo: 1000,00.',
         'banheiros.required' => 'O campo banheiros é obrigatório.',
         'quartos.required' => 'O campo quartos é obrigatório.',
-        'area_do_imovel' => 'O campo de área de imóvel é obrigatório.',
-        'area_do_imovel' => 'O campo área de imóvel deve conter no máximo 100 caracteres.',
-        'area_do_imovel' => 'O campo área de imóvel deve conter no mínimo 5 caracteres.'
+        'area_do_imovel.required' => 'O campo de área de imóvel é obrigatório.',
+        'area_do_imovel.max' => 'O campo área de imóvel deve conter no máximo 100 caracteres.',
+        'area_do_imovel.min' => 'O campo área de imóvel deve conter no mínimo 5 caracteres.'
     ];
 }
 }
