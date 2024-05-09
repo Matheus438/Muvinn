@@ -28,11 +28,11 @@ class MuvinnFormRequest extends FormRequest
             'cidade' => 'required|max:100|min:5',
             'endereco' => 'required|max:100|min:5',
             'tipos_imoveis' => 'required|max:100|min:5',
-            'preco' => 'required|decimal 10,2',
+            'preco' => 'required|decimal: 2',
             'banheiros' => 'required|integer',
             'quartos'=> 'required|integer',
             'vagas'=> 'integer',
-            'area_do_imovel'=> 'required|max:100|min:5'
+            'area_do_imovel'=> 'required|max:100|min:1'
         ];
     }
     public function failedValidation(Validator $validator){
@@ -58,7 +58,7 @@ public function messages()
         'tipos_imoveis.max' => 'O campo tipos de imóveis deve conter no máximo 100 caracteres.',
         'tipos_imoveis.min' => 'O campo tipos de imóveis deve conter no mínimo 5 caracteres.',
         'preco.required' => 'O campo preço é obrigatório.',
-        'preco.decimal' => 'O campo de preço tem que ser em decimal. Exemplo: 1000,00.',
+        'preco.decimal' => 'O campo de preço tem que ser em decimal. Exemplo: 1000.00.',
         'banheiros.required' => 'O campo banheiros é obrigatório.',
         'quartos.required' => 'O campo quartos é obrigatório.',
         'area_do_imovel.required' => 'O campo de área de imóvel é obrigatório.',

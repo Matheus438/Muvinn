@@ -14,7 +14,7 @@ class MuvinnController extends Controller
         $muvinn = Muvinn::create([
             'estado' => $request->estado,
             'cidade' => $request->cidade,
-            'endereco' => $request->esndereco,
+            'endereco' => $request->endereco,
             'tipos_imoveis' => $request->tipos_imoveis,
             'preco' => $request->preco,
             'banheiros' => $request->banheiros,

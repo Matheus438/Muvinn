@@ -24,15 +24,15 @@ class MuvinnUpdateFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'estado' => '|max:2|min:2',
-            'cidade' => '|max:100|min:5',
-            'endereco' => '|max:100|min:5',
-            'tipos_imoveis' => '|max:100|min:5',
-            'preco' => '|decimal 10,2',
-            'banheiros' => '|integer',
-            'quartos'=> '|integer',
+            'estado' => 'max:2|min:2',
+            'cidade' => 'max:100|min:5',
+            'endereco' => 'max:100|min:5',
+            'tipos_imoveis' => 'max:100|min:5',
+            'preco' => 'decimal 10,2',
+            'banheiros' => 'integer',
+            'quartos'=> 'integer',
             'vagas'=> 'integer',
-            'area_do_imovel'=> '|max:100|min:5'
+            'area_do_imovel'=> 'max:100|min:1'
         ];
     }
     public function failedValidation(Validator $validator){
