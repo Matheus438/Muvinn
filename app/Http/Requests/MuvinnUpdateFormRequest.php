@@ -28,7 +28,7 @@ class MuvinnUpdateFormRequest extends FormRequest
             'cidade' => 'max:100|min:5',
             'endereco' => 'max:100|min:5',
             'tipos_imoveis' => 'max:100|min:5',
-            'preco' => 'decimal 10,2',
+            'preco' => 'decimal: 2',
             'banheiros' => 'integer',
             'quartos'=> 'integer',
             'vagas'=> 'integer',
@@ -44,16 +44,25 @@ class MuvinnUpdateFormRequest extends FormRequest
 public function messages()
 {
     return[
-    'profissional_Id.required' => 'Campo profissional é obrigatório',
-    'cliente_Id.required' => 'Campo cliente é obrigatório',
-    'servico_Id.required' => 'Campo serviço é obrigatório',
-    'dataHora.required' => 'Campo data é obrigatório',
-    'dataHora.date' => 'Formato Inválido',
-    'pagamento.required' => 'Campo pagamento é obrigatório',
-    'pagamento.max' => 'Campo pagamento deve conter no maximo 20 caracteres',
-    'pagamento.min' => 'Campo pagamento deve conter no minimo 3 caracteres',
-    'valor.required' => 'Campo valor é obrigatório',
-    'valor.decimal' => 'Este campo so aceita numero decimal'
+        
+        'estado.max' => 'O campo estado deve conter no máximo 2 caracteres.',
+        'estado.min' => 'O campo estado deve conter no míninmo 2 caracteres.',
+       
+        'cidade.max' => 'O campo cidade deve conter no máximo 100 caracteres',
+        'cidade.min' => 'O campo cidade deve conter no mínimo 100 caracteres',
+       
+        'endereco.max' => 'O campo endereço deve conter no máximo 100 caracteres.',
+        'endereco.min' => 'O campo endereço deve conter no mínimo 5 caracteres.',
+       
+        'tipos_imoveis.max' => 'O campo tipos de imóveis deve conter no máximo 100 caracteres.',
+        'tipos_imoveis.min' => 'O campo tipos de imóveis deve conter no mínimo 5 caracteres.',
+        
+        'preco.decimal' => 'O campo de preço tem que ser em decimal. Exemplo: 1000.00.',
+       
+        'quartos.required' => 'O campo quartos é obrigatório.',
+       
+        'area_do_imovel.max' => 'O campo área de imóvel deve conter no máximo 100 caracteres.',
+        'area_do_imovel.min' => 'O campo área de imóvel deve conter no mínimo 5 caracteres.'
     ];
 }
 }
