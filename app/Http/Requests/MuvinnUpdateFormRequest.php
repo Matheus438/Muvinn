@@ -27,7 +27,7 @@ class MuvinnUpdateFormRequest extends FormRequest
             'estado' => 'max:2|min:2',
             'cidade' => 'max:100|min:5',
             'endereco' => 'max:100|min:5',
-            'tipos_imoveis' => 'max:100|min:5',
+            'tipos_imoveis' => 'max:100|min:2',
             'preco' => 'decimal: 2',
             'banheiros' => 'integer',
             'quartos'=> 'integer',
@@ -55,7 +55,7 @@ public function messages()
         'endereco.min' => 'O campo endereço deve conter no mínimo 5 caracteres.',
        
         'tipos_imoveis.max' => 'O campo tipos de imóveis deve conter no máximo 100 caracteres.',
-        'tipos_imoveis.min' => 'O campo tipos de imóveis deve conter no mínimo 5 caracteres.',
+        'tipos_imoveis.min' => 'O campo tipos de imóveis deve conter no mínimo 2 caracteres.',
         
         'preco.decimal' => 'O campo de preço tem que ser em decimal. Exemplo: 1000.00.',
        
