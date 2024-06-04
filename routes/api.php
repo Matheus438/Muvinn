@@ -7,5 +7,5 @@ use Illuminate\Support\Facades\Route;
 Route::post('imovel/criar',[ MuvinnController::class, 'criarAnuncio']);
 Route::post('imovel/pesquisaTipoImove', [MuvinnController::class, 'pesquisaPorTipoDeImovel']);
 Route::delete('imovel/delete/{id}', [MuvinnController::class, 'excluir']);
-Route::put('imovel/update', [MuvinnController::class, 'update']);
+Route::put('imovel/update{id}', [MuvinnController::class, 'update']);
 Route::get('imovel/retornarTodos', [MuvinnController::class, 'retornarTodos']);
